@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import django_heroku
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--d4@xvq7%*1esn^^k^a7s4xs5&=kpufenx-+@i*#4_ngx5-dj%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.environ.get('DEBUG')=='TRUE':
+    DEBUG = True
+elif os.environ.get('DEBUG')=='FALSE'
+    DEBUG = False
 
 ALLOWED_HOSTS = []
 
