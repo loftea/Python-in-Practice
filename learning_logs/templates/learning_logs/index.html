@@ -2,6 +2,17 @@
 
 {% block content %}
 
-<p>Learning Log helps you to improve your learning.</p>
+<div class="jumbotron">
+    <h1 class="display-3"> Track your learning.</h1>
+
+    <p class="lead">
+        Make your own learning log, and keep a list of the 
+        topics you are learning about.
+    </p>
+
+    <a href="{% url 'users:register' %}" role="button" class="btn  btn-lg btn-primary">
+        Register &raquo;
+    </a>
+</div>
 
 {% endblock content %}

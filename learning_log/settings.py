@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL='users:login'
+
+import django_heroku
+django_heroku.settings(locals())
 
 # Application definition
 
@@ -34,6 +38,9 @@ INSTALLED_APPS = [
     'learning_logs',
     'users',
     # 我的应用程序
+
+    # 第三方程序
+    'bootstrap4',
 
     'django.contrib.admin',
     'django.contrib.auth',

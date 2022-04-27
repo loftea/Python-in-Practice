@@ -14,3 +14,6 @@ def register(r):
             new_user = form.save()
             login(r, new_user)
             return redirect('learning_logs:index')
+    
+    context = {'form':form}
+    return render(r, 'registration/register.html', context)
